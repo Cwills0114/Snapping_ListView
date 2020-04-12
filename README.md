@@ -9,7 +9,8 @@ The work around i created was based off this <a href="https://medium.com/@tonyow
 The idea is creating a custom Scroll Physic the returns a scroll spring simulation.
 Feel free to add to this to make it smoother as this is not a great solution. Just one i have created.
 
-![Recordit GIF] (https://recordit.co/BNCE4IGQ60.gif)
+**Recordit**
+![Recordit GIF](https://recordit.co/BNCE4IGQ60.gif)
 
 ## Main file
 
