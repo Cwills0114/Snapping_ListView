@@ -4,7 +4,7 @@ Code for showing how to allow list views to snap to children
 
 ## Work around
 
-The work around i created was based off this <a href="https://medium.com/@tonyowen/flutter-formula-one-paging-animation-b65dfc5fc6ba" target="_Blank">medium article </a>
+The work around i created was based off this <a href="https://medium.com/@tonyowen/flutter-formula-one-paging-animation-b65dfc5fc6ba" target="_Blank">medium article </a> and this <a href="https://www.reddit.com/r/FlutterDev/comments/d9zzul/custom_scrollphysics/"> reddit post </a>
 
 The idea is creating a custom Scroll Physic the returns a scroll spring simulation.
 Feel free to add to this to make it smoother as this is not a great solution. Just one i have created.
@@ -39,7 +39,7 @@ if the remainder is not 0
 take away the remainder to create the difference
 take or add this difference from the position depending whether the position is too high or two low. 
 
-see flutter docs for infomation on <a href="https://medium.com/@tonyowen/flutter-formula-one-paging-animation-b65dfc5fc6ba" target="_Blank"> Scroll Spring Simulation </a>
+see flutter docs for infomation on <a href="https://api.flutter.dev/flutter/physics/ScrollSpringSimulation-class.html" target="_Blank"> Scroll Spring Simulation </a>
 
 
 
