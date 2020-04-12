@@ -33,11 +33,11 @@ ListView.builder(
 
 ## PhysicsFile
 
-The idea is that you take the current Scroll position
-Is the position divisble by the height of your cards
-if the remainder is not 0
-take away the remainder to create the difference
-take or add this difference from the position depending whether the position is too high or two low. 
+- The idea is that you take the current Scroll position
+- Is the position divisble by the height of your cards
+- If the remainder is not 0
+- Take away the remainder to create the difference
+- Take or add this difference from the position depending whether the position is too high or two low. 
 
 see flutter docs for infomation on <a href="https://api.flutter.dev/flutter/physics/ScrollSpringSimulation-class.html" target="_Blank"> Scroll Spring Simulation </a>
 
@@ -65,10 +65,11 @@ class listScrollPhysics extends ScrollPhysics {
 
 
   double getTarget(pos) {
+    double cardHeight = 140; //This 140 value will need to be change to suit your height
     double difference;
-    if (pos % 140 != 0) { //This 140 value will need to be change to suit your height
-          difference = ((pos) % 140);
-          if (difference >= 70) { // This 70 should be half of your height to determine if its below or higher
+    if (pos % cardHeight != 0) { 
+          difference = ((pos) % cardHeight);
+          if (difference >= cardHeight / 2) { // Half of your height to determine if its below or higher
             double target = (pos - difference) + 10; // These 10's are the extra spacing needed to get to the top of each card.
             return target;
           } else {
@@ -91,11 +92,11 @@ class listScrollPhysics extends ScrollPhysics {
           return super.createBallisticSimulation(position, velocity);
         final Tolerance tolerance = this.tolerance;
     
-        if (target != pos || target != null) {
+        if (target != pos || target != null) { //Target cannot be null there for is set back to pos
           return ScrollSpringSimulation(spring, pos, target, velocity,
               tolerance: tolerance);
         }
-        return null;
+        return null; 
       }
     
       @override
